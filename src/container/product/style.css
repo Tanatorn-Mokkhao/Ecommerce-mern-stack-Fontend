@@ -1,0 +1,31 @@
+.main-page{
+    display: grid;
+    grid-template-columns: 1fr;
+    /* grid-template-rows: 100vh; */
+   
+    /* width: 100vw;
+    height: 100vh; */
+    margin-top: 30px;
+}
+.main-page .list-product {
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    
+  grid-gap: 2rem;
+    
+}
+.main-page .list-product .list-detail {
+    /* border:1px solid; */
+    width: 200px;
+    background-color: white;
+    box-shadow: 0px 0px 0px 0.25px #aaaaaa;
+}
+.main-page .list-product .list-detail .img-thumbnail{
+    border:0px solid;
+    float: left;
+    /* width:  100px;
+    height: 100px; */
+    object-fit: cover;
+    
+}
+
