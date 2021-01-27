@@ -53,7 +53,10 @@ function Header() {
           <Link to="/">
             <img src="/img/international-e-commerce.svg" width="70px" />
           </Link>
-          <input type="text" />
+          <input
+            type="text"
+            onClick={() => alert("Incomming กำลังทำอยู่ครับ")}
+          />
 
           {renderTypesign()}
         </div>

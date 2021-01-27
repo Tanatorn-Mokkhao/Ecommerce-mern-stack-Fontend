@@ -19,7 +19,12 @@ function Placeorder() {
             <div className="detail-left">
               <div className="header-address">
                 <p>Delivery</p>
-                <p style={{ float: "right" }}>Add </p>
+                <p
+                  style={{ float: "right", cursor: "pointer" }}
+                  onClick={() => alert("Incomming กำลังทำอยู่ครับ")}
+                >
+                  Add{" "}
+                </p>
               </div>
               <hr />
               {/* <div className="detail-address"> */}
@@ -54,6 +59,7 @@ function Placeorder() {
                             width: "150px",
                             float: "right",
                           }}
+                          onClick={() => alert("Incomming กำลังทำอยู่ครับ")}
                         >
                           Delivery Here
                         </button>
