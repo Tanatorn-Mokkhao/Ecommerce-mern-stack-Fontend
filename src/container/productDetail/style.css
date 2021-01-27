@@ -1,0 +1,109 @@
+.product-detail{
+    display: grid;
+    grid-template-columns: 1fr;
+    background-color: white;
+    margin-top: 50px;
+ 
+}
+.product-detail .main-detail{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    
+    
+}
+
+@import "~react-image-gallery/styles/css/image-gallery.css";
+
+
+
+.image-gallery{
+    margin: 50px;
+ 
+   
+}
+
+.image-gallery-image{
+    height:500px;
+}
+.zone-right{
+    
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-top:50px;
+    text-align: start;
+}
+.zone-right .zone-right-top > h1{
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    
+}
+.zone-right .zone-right-top > p>img{
+    margin-bottom: 6px;
+  
+    
+}
+.zone-right .zone-right-top > p{
+    font-weight: bold;
+    color: red;
+    font-size: 35px;
+    font-family: Tahoma;
+    
+}
+.button-right > button{
+   
+    border:0px solid;
+    background-color: rgb(228, 121, 0);
+    color:white;
+    font-weight: bold;
+} 
+
+.button-right .btn1{
+    width: 120px;
+    height: 50px;
+}
+.button-right .btn2{
+    margin-left: 30px;
+    height: 50px;
+    width: 120px;
+}
+.button-add{
+    display: flex;
+}
+
+.button-add .btndecrese{
+    margin-left: 30px;
+    border:1px groove;
+    width: 30px;
+    height: 40px;
+    font-weight: bold;
+    text-align: center;
+}
+
+
+.button-add .btnincrese{
+    border:1px groove;
+    width: 30px;
+    height: 40px;
+    font-weight: bold;
+    text-align: center;
+  
+}
+
+
+
+.button-add  .count-value{
+    border:1px solid;
+    width: 60px;
+    height: 40px;
+    font-weight: bold;
+    text-align: center;
+
+    
+
+}
+
+
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+  }

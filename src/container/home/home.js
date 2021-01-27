@@ -11,13 +11,17 @@ function Home() {
     dipatch(getAllProduct());
   }, []);
 
+  if (!product.allproduct) {
+    return null;
+  }
+
   return (
     <div>
-      <Layout>
+      <Layout menubar>
         <Container className="main-page">
           <div className="list-product">
             {product.allproduct.map((data) => (
-              <div class="list-detail">
+              <div className="list-detail" key={data._id}>
                 <img
                   src={"http://localhost:2000/public/" + data.picture[0].img}
                   style={{ width: "100%", height: "68%" }}

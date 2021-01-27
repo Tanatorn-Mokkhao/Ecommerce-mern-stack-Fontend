@@ -10,7 +10,7 @@ function Menu() {
       list.push(
         <li key={cat._id}>
           {cat.parentId ? (
-            <a href={cat.slug}>
+            <a href={`/${cat.slug}`}>
               <span>{cat.name}</span>
             </a>
           ) : (

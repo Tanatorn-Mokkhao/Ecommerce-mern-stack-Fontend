@@ -5,12 +5,12 @@
 .container{
     display: grid;
     grid-template-columns: repeat(3,1fr);
-    grid-template-rows: 10vh;
+    grid-auto-rows: minmax(100px, auto);
 }
 .zone-1{
     display:flex;
     align-items: center;
-    margin-left: 80px;
+    margin-left: 0px;
 }
 .zone-1 > input{
     margin-left: 80px;
@@ -18,62 +18,116 @@
     height: 50%;
     border-radius: 8px;
 }
-.zone-1 > p{
+.zone-1 > a{
     margin-left: 80px;
     font-weight: bold;
     color:white;
     margin-top:10px;
 }
-
-@media only screen and (max-width: 1200px) {
+.zone-1 > span{
+    margin-left: 300px;
+    font-weight: bold;
+    color:white;
+   cursor: pointer;
+}
+.cart{
+    margin-left: 120px;
+    margin-bottom: 7px;
+    
+}
+.num-cart{
+    position: absolute;
+    margin-left: 1055px;
+    font-size: 20px;
+    color:red;
+    margin-bottom: 55px;
+    background-color: white;
+    width: 30px;
+    height: 30px;
+    border-radius: 12px;
+}
+@media  screen and (max-width: 1200px) {
     .zone-1 > input{
 
         width:500px;
      
     }
+    .num-cart{
+        margin-left: 955px;
+    }
   }
-  @media only screen and (max-width: 1100px) {
+  @media  screen and (max-width: 1100px) {
     .zone-1 > input{
 
         width:400px;
      
     }
+    .num-cart{
+        margin-left: 855px;
+    }
   }
 
-  @media only screen and (max-width: 1000px) {
+  @media  screen and (max-width: 1000px) {
     .zone-1 > input{
 
         width:350px;
      
     }
-    .zone-1 > p{
+    .zone-1 > a{
         margin-left: 50px;
   
 
     }
+    .num-cart{
+        margin-left: 745px;
+    }
   }
-  @media only screen and (max-width: 880px) {
+  @media  screen and (max-width: 880px) {
     .zone-1 > input{
 
         width:300px;
      
     }
-    .zone-1 > p{
+    .zone-1 > a{
         margin-left: 50px;
   
 
     }
+    .num-cart{
+        margin-left: 695px;
+    }
   }
-  @media only screen and (max-width: 780px) {
+  @media  screen and (max-width: 780px) {
     .zone-1 > input{
 
         width:200px;
      
     }
-    .zone-1 > p{
+    .zone-1 > a{
         margin-left: 40px;
   
 
     }
+    .num-cart{
+        margin-left: 575px;
+    }
   }
 
+  @media  screen and (max-width: 730px) {
+    .zone-1{
+        margin-left: 10px;
+    }
+    .zone-1 > input{
+        margin-left: 20px;
+        width:200px;
+     
+    }
+    .zone-1 > a{
+        margin-left: 30px;
+  
+
+    }
+    .num-cart{
+        margin-left: 500px;
+    }
+  }

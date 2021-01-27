@@ -25,3 +25,16 @@ export const getAllProduct = () => {
     }
   };
 };
+
+export const getProductDetailByid = (payload) => {
+  return async (dispatch) => {
+    dispatch({ type: productType.GET_PRODUCT_DETAIL_REQUEST });
+    const res = await axios.post(`/product/id/${payload}`);
+    if (res.status === 200) {
+      dispatch({
+        type: productType.GET_PRODUCT_DETAIL_SUCCESS,
+        payload: res.data,
+      });
+    }
+  };
+};

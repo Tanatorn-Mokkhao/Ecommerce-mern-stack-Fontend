@@ -6,7 +6,7 @@ function Layout(props) {
   return (
     <div>
       <Header />
-      <Menu />
+      {props.menubar ? <Menu /> : null}
       {props.children}
     </div>
   );

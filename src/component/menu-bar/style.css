@@ -1,6 +1,6 @@
 .grid-menu-bar{
     display: grid;
-    grid-template-rows: 5vh;
+    grid-auto-rows: minmax(50px, auto);
     background-color: rgb(255,255,255);
     box-shadow: 10px 3px 2px #aaaaaa;
     border: 1px solid #bfbfbf;

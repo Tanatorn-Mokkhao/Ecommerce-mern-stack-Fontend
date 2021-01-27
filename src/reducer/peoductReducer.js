@@ -3,6 +3,7 @@ import { productType } from "../action/type";
 const initialState = {
   product: [],
   allproduct: [],
+  productDetail: [],
   error: null,
   loading: false,
 };
@@ -46,6 +47,26 @@ export default (state = initialState, action) => {
       state = {
         ...state,
         loading: false,
+      };
+      break;
+    case productType.GET_PRODUCT_DETAIL_REQUEST:
+      state = {
+        ...state,
+        loading: true,
+      };
+      break;
+    case productType.GET_PRODUCT_DETAIL_SUCCESS:
+      state = {
+        ...state.allproduct,
+        loading: false,
+        productDetail: action.payload.product,
+      };
+      break;
+    case productType.GET_PRODUCT_DETAIL_FAILURE:
+      state = {
+        ...state,
+        loading: false,
+        error: action.payload.error,
       };
       break;
   }
