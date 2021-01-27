@@ -1,3 +1,8 @@
+body{
+    font-family: sans-serif;
+
+}
+
 .con-place-order{
     display: grid;
     grid-template-columns: 1fr;
@@ -24,4 +29,14 @@
     font-size: 28px;
     font-weight: bold;
     padding: 15px 15px;
+ 
+   
+}
+ 
+
+.detail-address {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    margin-top: 50px;
+  
 }

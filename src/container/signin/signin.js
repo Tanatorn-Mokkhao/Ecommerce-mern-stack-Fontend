@@ -54,6 +54,9 @@ function Signin(props) {
             ></input>
             <br />
             <button onClick={handleLogin}>LOG IN</button>
+            <br />
+            <br />
+            {auth.error ? <p>{auth.error}</p> : null}
           </div>
         </div>
         <div className="signin-right">1</div>

@@ -40,7 +40,7 @@ function Header() {
             <GrCart className="cart" size="45px" />
           </Link>
           <Link to="/signin">Singin</Link>
-          <Link to="/signin">Signup</Link>
+          <Link to="/signup">Signup</Link>
         </>
       );
     }

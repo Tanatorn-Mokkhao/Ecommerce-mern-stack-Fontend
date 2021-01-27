@@ -8,7 +8,7 @@ export const getAddress = () => {
       if (res.status == 200) {
         dispatch({
           type: addressType.GET_ADDRESS_SUCCESS,
-          payload: res.data,
+          payload: res.data.address,
         });
       }
     } catch (error) {

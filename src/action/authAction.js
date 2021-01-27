@@ -19,7 +19,7 @@ export const signin = (payload) => {
     } catch (error) {
       dispatch({
         type: authType.LOGIN_FAILURE,
-        payload: { error: error.response.data },
+        payload: error.response.data,
       });
     }
   };
@@ -49,6 +49,24 @@ export const signout = () => {
       }
     } catch (error) {
       console.log(error);
+    }
+  };
+};
+
+export const signup = (payload) => {
+  return async (dispatch) => {
+    try {
+      dispatch({ type: authType.SIGNUP_REQUEST });
+      const res = await axios.post("/user/signup", { payload });
+      if (res.status == 201) {
+        dispatch({ type: authType.SIGNUP_SUCCESS });
+        window.location.href = "/signin";
+      }
+    } catch (error) {
+      dispatch({
+        type: authType.SIGNUP_FAILURE,
+        payload: error.response.data,
+      });
     }
   };
 };

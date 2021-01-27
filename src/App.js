@@ -14,6 +14,7 @@ import { getCart } from "./action/cartAction";
 import Private from "./privateRoute/privateRoute";
 import Cart from "./container/cart/cart";
 import Placeorder from "./container/placeorder/placeorder";
+import Signup from "./container/signup/signup";
 function App() {
   const dispatch = useDispatch();
   const auth = useSelector((state) => state.auth);
@@ -30,6 +31,7 @@ function App() {
       <Switch>
         <Route path="/" exact component={Home} />
         <Route path="/signin" component={Signin} />
+        <Route path="/signup" exact component={Signup} />
         <Private path="/cart" component={Cart} />
         <Private path="/placeorder" component={Placeorder} />
         <Route path="/:productSlug/:productId" component={ProductDetail} />
