@@ -59,7 +59,7 @@ function Signin(props) {
             {auth.error ? <p>{auth.error}</p> : null}
           </div>
         </div>
-        <div className="signin-right">1</div>
+        <div className="signin-right"></div>
       </Container>
     </div>
   );
