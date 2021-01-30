@@ -25,7 +25,7 @@
     margin-top:10px;
 }
 .zone-1 > span{
-    margin-left: 300px;
+    margin-left: 120px;
     font-weight: bold;
     color:white;
    cursor: pointer;
@@ -46,6 +46,62 @@
     height: 30px;
     border-radius: 12px;
 }
+
+.zone-1 > ul{
+    list-style: none;
+    margin-top: 18px;
+    margin-left: 100px;
+    
+}
+.zone-1 > ul > li> span{
+    font-weight: bold;
+    color:white;
+  
+
+}
+.zone-1 > ul >li >ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: start;
+    
+}
+
+
+
+
+.zone-1 > ul >li > ul{
+    background-color: white;
+    position: absolute;
+    background: #fff;
+    width:150px;
+    height: 200px;
+    border: 1px solid #cecece;
+    display: none;
+    font-weight: bold;
+    cursor: pointer;
+   
+}
+
+.zone-1 > ul >li > ul >li{
+    margin-top: 10px;
+   
+}
+.zone-1 > ul >li > ul > li>a{
+  text-decoration: none;
+  color: black;
+  padding:20px;
+
+   
+}
+.zone-1 > ul >li:hover ul{
+    display: block;
+
+}
+
+
+
+
 @media  screen and (max-width: 1200px) {
     .zone-1 > input{
 

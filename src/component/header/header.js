@@ -30,6 +30,16 @@ function Header() {
           <Link to="/cart">
             <GrCart className="cart" size="45px" />
           </Link>
+          <ul>
+            <li>
+              <span>{auth.user.username}</span>
+              <ul>
+                <li>
+                  <Link to="/orderHistory">Order history</Link>
+                </li>
+              </ul>
+            </li>
+          </ul>
           <span onClick={handleSignOut}>Signout</span>
         </>
       );
