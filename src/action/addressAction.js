@@ -16,3 +16,18 @@ export const getAddress = () => {
     }
   };
 };
+
+export const addAddress = (payload) => {
+  return async (dispatch) => {
+    try {
+      dispatch({ type: addressType.ADD_ADDRESS_REQUEST });
+      const res = await axios.post("/create/address", { payload });
+
+      if (res.status === 201) {
+        console.log("hi");
+      }
+    } catch (error) {
+      console.log(error.response);
+    }
+  };
+};

@@ -21,6 +21,24 @@ export default (state = initialState, action) => {
         address: action.payload.address,
       };
       break;
+    case addressType.ADD_ADDRESS_REQUEST:
+      state = {
+        ...state,
+        loading: true,
+      };
+      break;
+    case addressType.ADD_ADDRESS_SUCCESS:
+      state = {
+        ...state,
+        loading: true,
+      };
+      break;
+    case addressType.ADD_ADDRESS_FAILURE:
+      state = {
+        ...state,
+        loading: false,
+      };
+      break;
   }
   return state;
 };

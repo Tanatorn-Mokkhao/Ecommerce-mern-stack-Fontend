@@ -15,6 +15,8 @@ import Private from "./privateRoute/privateRoute";
 import Cart from "./container/cart/cart";
 import Placeorder from "./container/placeorder/placeorder";
 import Signup from "./container/signup/signup";
+import OrderHistory from "./container/orderHistory/orderHistory";
+
 function App() {
   const dispatch = useDispatch();
   const auth = useSelector((state) => state.auth);
@@ -34,6 +36,7 @@ function App() {
         <Route path="/signup" exact component={Signup} />
         <Private path="/cart" component={Cart} />
         <Private path="/placeorder" component={Placeorder} />
+        <Private path="/orderHistory" component={OrderHistory} />
         <Route path="/:productSlug/:productId" component={ProductDetail} />
         <Route path="/:slug" component={Product} />
       </Switch>

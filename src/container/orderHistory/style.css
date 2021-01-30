@@ -1,0 +1,34 @@
+.orderHistory-page {
+    display: grid;
+    grid-template-columns: minmax(350px,1fr);
+    grid-gap: 20px;
+
+}
+
+.orderHistory-page .header {
+   font-weight: bold;
+   font-size: 2rem;
+   text-align: start;
+   margin-top:20px
+}
+.orderHistory-page .detail{
+    background-color: white;
+}
+
+.orderHistory-page .detail > p {
+    text-align: start;
+}
+.orderHistory-page .detail > p >  ul{
+    display: flex;
+    list-style: none;
+}
+.orderHistory-page .detail > p >  ul  .li {
+    display: block;
+    color:red
+}
+.orderHistory-page .detail > p >  ul > li >img {
+
+    width:  100px;
+    height: 100px;
+    object-fit: cover;
+}
