@@ -23,15 +23,19 @@ function ProductDetail(props) {
   }, []);
 
   const handleAddToCart = () => {
-    const payload = {
-      product: product.productDetail._id,
-      quantity: value,
-      price: product.productDetail.price * value,
-    };
+    if (product.productDetail.quantity > 0) {
+      const payload = {
+        product: product.productDetail._id,
+        quantity: value,
+        price: product.productDetail.price * value,
+      };
 
-    dispatch(AddToCart(payload)).then(() => {
-      dispatch(getCart());
-    });
+      dispatch(AddToCart(payload)).then(() => {
+        dispatch(getCart());
+      });
+    } else {
+      alert("No product left");
+    }
   };
 
   const renderPicture = (product) => {
