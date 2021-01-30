@@ -25,24 +25,19 @@ function OrderHistory() {
               <hr />
               <p>
                 {data.orderItems.map((_data, index) => (
-                  <>
-                    <ul>
-                      <li>
-                        <img
-                          src={
-                            "http://localhost:2000/public/" +
-                            _data.product.picture[0].img
-                          }
-                        />
-                      </li>
-                      <li style={{ marginTop: "20px" }}>
-                        {_data.product.name}
-                      </li>
+                  <ul key={index}>
+                    <li>
+                      <img
+                        src={
+                          "http://localhost:2000/public/" +
+                          _data.product.picture[0].img
+                        }
+                      />
+                    </li>
+                    <li style={{ marginTop: "20px" }}>{_data.product.name}</li>
 
-                      <ul style={{ marginTop: "20px" }}>X{_data.quantity}</ul>
-                    </ul>
-                    <hr />
-                  </>
+                    <ul style={{ marginTop: "20px" }}>X{_data.quantity}</ul>
+                  </ul>
                 ))}
               </p>
               <p style={{ padding: "50px 20px", direction: "rtl" }}>
