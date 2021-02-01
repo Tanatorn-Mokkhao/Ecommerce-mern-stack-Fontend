@@ -16,14 +16,15 @@ import Cart from "./container/cart/cart";
 import Placeorder from "./container/placeorder/placeorder";
 import Signup from "./container/signup/signup";
 import OrderHistory from "./container/orderHistory/orderHistory";
-
+// import io from "socket.io-client";
+// const socket = io.connect("http://localhost:2000");
 function App() {
   const dispatch = useDispatch();
   const auth = useSelector((state) => state.auth);
   useEffect(() => {
     dispatch(initialData());
     dispatch(isLogged());
-
+    // socket.on();
     if (auth.authenticate) {
       dispatch(getCart());
     }
